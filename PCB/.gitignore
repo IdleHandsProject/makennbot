@@ -1,0 +1,17 @@
+# For PCBs designed using KiCAD: http://www.kicad-pcb.org/
+
+*.CATPart
+*.CATDrawing
+*.CAT*
+
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+.dsn

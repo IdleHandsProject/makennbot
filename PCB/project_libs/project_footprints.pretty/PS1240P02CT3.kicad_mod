@@ -1,0 +1,12 @@
+(module PS1240P02CT3 (layer F.Cu) (tedit 54661387)
+  (fp_text reference PS1240P02CT3 (at -0.8 -16) (layer F.SilkS) hide
+    (effects (font (size 1.5 1.5) (thickness 0.15)))
+  )
+  (fp_text value VAL** (at -1.6 -6.6) (layer F.SilkS)
+    (effects (font (size 0.5 0.5) (thickness 0.125)))
+  )
+  (fp_circle (center 0 0) (end 0.4 1.2) (layer F.SilkS) (width 0.15))
+  (fp_circle (center 0 0) (end 6.2 0) (layer F.SilkS) (width 0.15))
+  (pad 1 thru_hole circle (at -2.5 0) (size 1.5 1.5) (drill 0.75) (layers *.Cu *.Mask F.SilkS))
+  (pad 2 thru_hole circle (at 2.5 0) (size 1.5 1.5) (drill 0.75) (layers *.Cu *.Mask F.SilkS))
+)

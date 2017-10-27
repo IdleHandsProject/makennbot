@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Moist_Pad
+#
+DEF ~Moist_Pad MP 0 40 Y Y 1 F N
+F0 "MP" 250 50 60 H V C CNN
+F1 "Moist_Pad" 0 150 60 H I C CNN
+F2 "" -450 50 60 H V C CNN
+F3 "" -450 50 60 H V C CNN
+DRAW
+S -150 100 150 -100 0 1 0 f
+X PAD_F 1 -450 50 299 R 50 50 1 1 I
+X PAD_B 2 -450 -50 299 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

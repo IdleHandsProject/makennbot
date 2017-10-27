@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LM4040
+#
+DEF LM4040 U 0 40 Y Y 1 F N
+F0 "U" 350 200 60 H V C CNN
+F1 "LM4040" 250 -300 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+S -50 150 400 -250 0 1 0 f
+X + 1 0 350 200 D 50 50 1 1 I
+X - 2 0 -450 200 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
