@@ -65,7 +65,7 @@ float Input[PatternCount][InputNodes] = {
 };
 
 const float Target[PatternCount][OutputNodes] = {
-  { 0.75, 0.75 },
+  { 0.65, 0.55 },
   { 0.75, 0.5 },     //BOTH MOTORS FULL FORWARD
   { 0.2, 0.2 },     //BOTH MOTORS FULL BACKWARDS
   { 1, 0.2 },   //MOTOR RIGHT FULL FORWARD, LEFT STOPPED
