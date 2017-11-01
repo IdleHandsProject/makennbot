@@ -1,3 +1,17 @@
+/************************************************
+ * Make: Arduino Neural Network Robot
+ * 01/11/2017
+ * This firmware is comprised of various open source libraries and examples.
+ * Original elements created by Sean Hodgins
+ * This firmware is free and open source and can be found here: https://github.com/idlehandsproject/makennbot 
+ * 
+ * Information on the Neural Network and the code 
+ * can be found here: http://robotics.hobbizine.com/arduinoann.html
+ * 
+ * For the OLED screen, the U8G2 library can be found here: https://github.com/olikraus/u8g2
+ * 
+ */
+
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include "make_logo.h"
@@ -60,18 +74,18 @@ float Input[PatternCount][InputNodes] = {
   { 1, 1, 0, 1 },  // LIGHT ON TOP, BOTTOM, and LEFT
   { 1, 0, 1, 1 },  // LIGHT ON TOP, BOTTOM, and RIGHT
   { 1, 0, 1, 0 },  // LIGHT ON TOP AND RIGHT
-  { 1, 1, 1, 1 },
+  { 1, 1, 1, 1 },  // LIGHT ON ALL
 
 };
 
 const float Target[PatternCount][OutputNodes] = {
-  { 0.65, 0.55 },
-  { 0.75, 0.5 },     //BOTH MOTORS FULL FORWARD
+  { 0.65, 0.55 },   //LEFT MOTOR SLOW
+  { 0.75, 0.5 },    //LEFT MOTOR FASTER
   { 0.2, 0.2 },     //BOTH MOTORS FULL BACKWARDS
-  { 1, 0.2 },   //MOTOR RIGHT FULL FORWARD, LEFT STOPPED
-  { 0.5, 0.75 }, //MOTOR RIGHT BACKWARDS, LEFT STOPPED
-  { 0.3, 0.3 }, //MOTOR LEFT BACKWARDS, RIGHT STOPPED
-  { 0.5, 0.5 },   //BOTH MOTORS BACKWARDS
+  { 1, 0.2 },       //MOTOR LEFT FULL FORWARD, RIGHT BACKWARDS
+  { 0.5, 0.75 },    //MOTOR LEFT STOPPED, RIGHT FORWARDS
+  { 0.3, 0.3 },     //BOTH BACKWARDS 
+  { 0.5, 0.5 },     //BOTH MOTORS STOPPED
   { 0.75, 0.75 },
   { 1, 0.75 },
   { 0.75, 1 },
@@ -187,9 +201,10 @@ void loop() {
   }
 }
 
+//THIS IS THE SIMPLE LIGHT AVOID ROUTINE(NO NEURAL NETWORK)
 void simpleLightAvoid() {
   while (1){
-  PH1 = analogRead(A1);
+  PH1 = analogRead(A1); //READ PHOTORESISTORS
   PH2 = analogRead(A2);
   PH3 = analogRead(A3);
   PH4 = analogRead(A4);
@@ -206,6 +221,8 @@ void simpleLightAvoid() {
   }
 }
 
+
+//THIS ROUTINE IS FOR TESTING THE MOTORS
 void motorTesting() {
   SerialUSB.println("Driving Forward");
   motorA(70);
@@ -228,6 +245,7 @@ void motorTesting() {
   while (1);
 }
 
+//DRAWS THE MAKE LOGO
 void drawLogo(void)
 {
   uint8_t mdy = 0;
@@ -245,6 +263,7 @@ void drawBars(int P1, int P2, int P3, int P4) {
 
 }
 
+//DRAWS THE CIRCLE ON THE SCREEN WHILE NAVIGATING
 void drawBallDir(int P1, int P2, int P3, int P4) {
   int pull_x = 0;
   int pull_y = 0;
@@ -254,6 +273,7 @@ void drawBallDir(int P1, int P2, int P3, int P4) {
   ballMotorControl(pull_x, pull_y);
 }
 
+//CONTROLS THE MOTORS BASED ON THE BALL LOCATION
 void ballMotorControl(int mxd, int myd) {
   int  Aspeed = 50;
   int  Bspeed = 50;
@@ -272,6 +292,7 @@ void ballMotorControl(int mxd, int myd) {
 
 }
 
+//DRIVES MOTOR A
 void motorA(int percent) {
   int maxSpeed = 90;
   int minSpeed = 10;
@@ -312,6 +333,7 @@ void motorA(int percent) {
   }
 }
 
+//DRIVES MOTOR B
 void motorB(int percent) {
   int maxSpeed = 85;
   int minSpeed = 45;
@@ -350,14 +372,14 @@ void motorB(int percent) {
   }
 }
 
-
+//PLAYS THE INTRO MESSAGE
 void intro() {
-
   u8g2.drawStr( 1, 10, "ANN BOT");
   u8g2.drawStr( 1, 25, "V0.1");
 }
 
 
+//DISPLAYS THE MENU
 void menu_select() {
   menu_circle();
   u8g2.drawStr( 7, 10, "1)Simple");
@@ -365,11 +387,13 @@ void menu_select() {
   u8g2.drawStr( 7, 40, "3)RunNN");
 }
 
+//DISPLAYS THE CIRCLE ON THE MENU
 void menu_circle() {
   int yloc = curr_menu * 15;
   u8g2.drawCircle(3, yloc - 9, 2);
 }
 
+//LEFT BUTTON CHANGES THE MENU CIRCLE
 void menu_change(void)
 {
   static unsigned long last_interrupt_time = 0;
@@ -392,6 +416,7 @@ void load_prog() {
   prog_start = 1;
 }
 
+//TRAINS THE NEURAL NETWORK
 void train_nn() {
   /******************************************************************
     Initialize HiddenWeights and ChangeHiddenWeights
@@ -514,7 +539,7 @@ void train_nn() {
     }
 
     /******************************************************************
-      Every 1000 cycles send data to terminal for display
+      Every 100 cycles send data to terminal for display and draws the graph on OLED
     ******************************************************************/
     ReportEvery1000 = ReportEvery1000 - 1;
     if (ReportEvery1000 == 0)
@@ -562,7 +587,7 @@ void train_nn() {
   }
 }
 
-
+//USES TRAINED NEURAL NETWORK TO DRIVE ROBOT
 void drive_nn()
 {
   SerialUSB.println("Running NN Drive Test");
@@ -644,7 +669,7 @@ void drawGraph(){
   } 
 }
 
-
+//DISPLAYS INFORMATION WHILE TRAINING
 void toTerminal()
 {
 
