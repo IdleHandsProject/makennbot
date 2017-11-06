@@ -2,7 +2,11 @@
 A light avoiding robot that navigates using a Neural Network.
 
 Part 1 of the Build!
-[![PIDDYBOT on YouTube](https://img.youtube.com/vi/0D5lcNIEa24/0.jpg)](https://youtu.be/0D5lcNIEa24)
+[![Part 1 on YouTube](https://img.youtube.com/vi/0D5lcNIEa24/0.jpg)](https://youtu.be/0D5lcNIEa24)
+
+Part 2 of the Build!
+[![Part 2 on YouTube](https://img.youtube.com/vi/fCmMrSfEsuU/0.jpg)](https://youtu.be/fCmMrSfEsuU)
+
 
 BOM Here: https://www.findchips.com/org/10-open-hardware/list/53285-makennbot
 
