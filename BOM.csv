@@ -1,0 +1,33 @@
+ref,value,footprint,Digikey Part No.,Mouser Part No.,Quantity
+U4,MCP73831T,idlehands_footprints:sot23-5,MCP73831T-2ACI/OTCT-ND,,1
+U5,DRV8835,project_footprints:WSON-12-2x3,296-30391-1-ND,,1
+U3,AP2112K-3.3V,TO_SOT_Packages_SMD:SOT-23-5,AP2112K-3.3TRG1DICT-ND,,1
+Y1,Crystal_Small,project_footprints:crystal_smd_5x3.2mm,535-9536-1-ND,,1
+R18,33k,Resistors_SMD:R_0603,311-33KGRCT-ND,,1
+P3,CONN_01X07,Pin_Headers:Pin_Header_Straight_1x07,S7040-ND,,1
+D1,D_Schottky,idlehands_footprints:sod80c,B130-FDICT-ND,,1
+R2,330,Resistors_SMD:R_0603,311-330GRCT-ND,,1
+C13,10uF,Capacitors_SMD:C_0603,587-1256-1-ND,,1
+F1,500mA,project_footprints:c_1206,507-1803-1-ND,,1
+R4 R5,47K,Resistors_SMD:R_0603,311-47.0KHRCT-ND,,2
+C6 C9,2.2uF,Capacitors_SMD:C_0603,587-1430-1-ND,,2
+C3 C5 C1 C11 C12 C14 C15,0.1uF,Capacitors_SMD:C_0603,478-1239-1-ND,,7
+C10 C7,4.7uF,Capacitors_SMD:C_0603,490-5421-1-ND,,2
+D6,RX,project_footprints:Led_0603,160-1447-1-ND,,1
+U1,74AHC1G125,project_footprints:sot23-5,1727-6024-1-ND,,1
+R1,100k,Resistors_SMD:R_0603,311-100KHRCT-ND,,1
+D7,TX,project_footprints:Led_0603,160-1448-1-ND,,1
+P17,DBG_CONN,Pin_Headers:Pin_Header_Straight_2x05_Pitch1.27mm,1175-1627-ND,,1
+P4 P5,MOTOR_A,Capacitors_SMD:C_1206,F3781-ND,,2
+PH4 PH3 PH2 PH1,Photores,Pin_Headers:Pin_Header_Straight_1x02,PDV-P8001-ND,,4
+Q1,Q_PMOS_DSG,project_footprints:SOT23,DMG2307L-7DICT-ND,,1
+C2 C4,15pF,Capacitors_SMD:C_0603,1276-2192-1-ND,,2
+Q2,Q_PMOS_GSD,idlehands_footprints:SOT23,IRLML6402PBFCT-ND,,1
+U2,SAMD21G18,project_footprints:TQFP-48_7x7mm_Pitch0.5mm,ATSAMD21G18A-AU-ND,,1
+P1,USB_OTG,Connect:USB_Micro-B,609-4618-1-ND,,1
+P2,BatteryHolder,Connectors_JST_PH:Connectors_JST_S2B-PH-K,36-2479-ND,,1
+R14 R13 R19,1k,Resistors_SMD:R_0603,311-1.0KGRCT-ND,,3
+SW2 SW3 SW4,SW_PUSH,Buttons_Switches_SMD:SW_SPST_EVQPE1,401-1702-1-ND,,3
+L1,FB - 30Ohm,project_footprints:R_SM0603,445-2986-1-ND,,1
+R3 R6 R9 R11 R15,10k,Resistors_SMD:R_0603,311-10KGRCT-ND,,5
+C8,1uF,Capacitors_SMD:C_0603,1276-1946-1-ND,,1

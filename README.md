@@ -7,6 +7,8 @@ Part 1 of the Build!
 Part 2 of the Build!
 [![Part 2 on YouTube](https://img.youtube.com/vi/fCmMrSfEsuU/0.jpg)](https://youtu.be/fCmMrSfEsuU)
 
+Part 3 of the Build!
+[![Part 3 on YouTube](https://img.youtube.com/vi/97R3TcUh5eI/0.jpg)](https://youtu.be/97R3TcUh5eI)
 
 BOM Here: https://www.findchips.com/org/10-open-hardware/list/53285-makennbot
 
