@@ -20,4 +20,5 @@ OLED: https://www.aliexpress.com/item/White-0-66-inch-OLED-Display-Module-64x48-
 
 Battery(anything with JST SH connector): https://www.sparkfun.com/products/13851
 
+A viewer created a method to train the network using a Python Script, Check it out here: https://github.com/JonComo/Arduino_weight_trainer
 
