@@ -1,16 +1,16 @@
 /************************************************
- * Make: Arduino Neural Network Robot
- * 01/11/2017
- * This firmware is comprised of various open source libraries and examples.
- * Original elements created by Sean Hodgins
- * This firmware is free and open source and can be found here: https://github.com/idlehandsproject/makennbot 
- * 
- * Information on the Neural Network and the code 
- * can be found here: http://robotics.hobbizine.com/arduinoann.html
- * 
- * For the OLED screen, the U8G2 library can be found here: https://github.com/olikraus/u8g2
- * 
- */
+   Make: Arduino Neural Network Robot
+   01/11/2017
+   This firmware is comprised of various open source libraries and examples.
+   Original elements created by Sean Hodgins
+   This firmware is free and open source and can be found here: https://github.com/idlehandsproject/makennbot
+
+   Information on the Neural Network and the code
+   can be found here: http://robotics.hobbizine.com/arduinoann.html
+
+   For the OLED screen, the U8G2 library can be found here: https://github.com/olikraus/u8g2
+
+*/
 
 #include <Arduino.h>
 #include <U8g2lib.h>
@@ -84,7 +84,7 @@ const float Target[PatternCount][OutputNodes] = {
   { 0.2, 0.2 },     //BOTH MOTORS FULL BACKWARDS
   { 1, 0.2 },       //MOTOR LEFT FULL FORWARD, RIGHT BACKWARDS
   { 0.5, 0.75 },    //MOTOR LEFT STOPPED, RIGHT FORWARDS
-  { 0.3, 0.3 },     //BOTH BACKWARDS 
+  { 0.3, 0.3 },     //BOTH BACKWARDS
   { 0.5, 0.5 },     //BOTH MOTORS STOPPED
   { 0.75, 0.75 },
   { 1, 0.75 },
@@ -123,10 +123,10 @@ int ErrorGraph[64];
 
 void setup() {
   // put your setup code here, to run once:
-  for (int x = 0; x<64; x++){
+  for (int x = 0; x < 64; x++) {
     ErrorGraph[x] = 47;
   }
-  
+
   pinMode(A1, INPUT);
   pinMode(A2, INPUT);
   pinMode(A3, INPUT);
@@ -136,6 +136,9 @@ void setup() {
 
   pinMode(PHEN, OUTPUT);
   digitalWrite(PHEN, LOW);
+
+
+
 
   randomSeed(analogRead(A1));       //Collect a random ADC sample for Randomization.
   ReportEvery1000 = 1;
@@ -150,6 +153,11 @@ void setup() {
   u8g2.setFlipMode(0);
   u8g2.setFont(u8g2_font_6x12_tr);
   u8g2.setColorIndex(1);
+  int testmode = 1;
+  testmode = digitalRead(left_b);
+  if (testmode == 0) {
+    motorTesting();
+  }
 
   u8g2.firstPage();
   do {
@@ -203,21 +211,21 @@ void loop() {
 
 //THIS IS THE SIMPLE LIGHT AVOID ROUTINE(NO NEURAL NETWORK)
 void simpleLightAvoid() {
-  while (1){
-  PH1 = analogRead(A1); //READ PHOTORESISTORS
-  PH2 = analogRead(A2);
-  PH3 = analogRead(A3);
-  PH4 = analogRead(A4);
-  PH1 = map(PH1, 400, 1024, 0, 48);
-  PH2 = map(PH2, 400, 1024, 0, 64);
-  PH3 = map(PH3, 400, 1024, 0, 64);
-  PH4 = map(PH4, 400, 1024, 0, 48);
-  //motorTesting();
-  u8g2.firstPage();
-  do {
-    //drawBars(PH1,PH2,PH3,PH4);
-    drawBallDir(PH1, PH2, PH3, PH4);
-  } while ( u8g2.nextPage() );
+  while (1) {
+    PH1 = analogRead(A1); //READ PHOTORESISTORS
+    PH2 = analogRead(A2);
+    PH3 = analogRead(A3);
+    PH4 = analogRead(A4);
+    PH1 = map(PH1, 400, 1024, 0, 48);
+    PH2 = map(PH2, 400, 1024, 0, 64);
+    PH3 = map(PH3, 400, 1024, 0, 64);
+    PH4 = map(PH4, 400, 1024, 0, 48);
+    //motorTesting();
+    u8g2.firstPage();
+    do {
+      //drawBars(PH1,PH2,PH3,PH4);
+      drawBallDir(PH1, PH2, PH3, PH4);
+    } while ( u8g2.nextPage() );
   }
 }
 
@@ -225,24 +233,45 @@ void simpleLightAvoid() {
 //THIS ROUTINE IS FOR TESTING THE MOTORS
 void motorTesting() {
   SerialUSB.println("Driving Forward");
+  u8g2.firstPage();
+  do {
+    u8g2.drawStr( 1, 10, "Forward");
+  } while ( u8g2.nextPage() );
   motorA(70);
   motorB(70);
   delay(1000);
   SerialUSB.println("Stopping");
+  u8g2.firstPage();
+  do {
+    u8g2.drawStr( 1, 10, "Stopping");
+  } while ( u8g2.nextPage() );
   motorA(50);
   motorB(50);
   delay(1000);
   SerialUSB.println("Turning");
+  u8g2.firstPage();
+  do {
+    u8g2.drawStr( 1, 10, "Turning");
+  } while ( u8g2.nextPage() );
   motorA(70);
   motorB(20);
 
-  delay(500);
+  delay(1000);
+  u8g2.firstPage();
+  do {
+    u8g2.drawStr( 1, 10, "Backwards");
+  } while ( u8g2.nextPage() );
   motorA(30);
   motorB(30);
   delay(1000);
+  u8g2.firstPage();
+  do {
+    u8g2.drawStr( 1, 10, "Stopped");
+  } while ( u8g2.nextPage() );
   motorA(50);
   motorB(50);
-  while (1);
+  delay(1000);
+  //while (1);
 }
 
 //DRAWS THE MAKE LOGO
@@ -544,15 +573,15 @@ void train_nn() {
     ReportEvery1000 = ReportEvery1000 - 1;
     if (ReportEvery1000 == 0)
     {
-      int graphNum = TrainingCycle/100;
+      int graphNum = TrainingCycle / 100;
       int graphE1 = Error * 1000;
-      int graphE = map(graphE1, 3, 80, 47, 0); 
+      int graphE = map(graphE1, 3, 80, 47, 0);
       ErrorGraph[graphNum] = graphE;
       u8g2.firstPage();
-    do {
-      drawGraph();
-    } while ( u8g2.nextPage() );
-  
+      do {
+        drawGraph();
+      } while ( u8g2.nextPage() );
+
       SerialUSB.println();
       SerialUSB.println();
       SerialUSB.print ("TrainingCycle: ");
@@ -591,9 +620,9 @@ void train_nn() {
 void drive_nn()
 {
   SerialUSB.println("Running NN Drive Test");
-  if (Success < Error){
-      prog_start = 0;
-      SerialUSB.println("NN not Trained");
+  if (Success < Error) {
+    prog_start = 0;
+    SerialUSB.println("NN not Trained");
   }
   while (Error < Success) {
     int num;
@@ -663,10 +692,10 @@ void drive_nn()
   }
 }
 
-void drawGraph(){
-  for (int x = 2; x<64; x++){
-  u8g2.drawLine(x-1, ErrorGraph[x-2], x-1, ErrorGraph[x-1]);
-  } 
+void drawGraph() {
+  for (int x = 2; x < 64; x++) {
+    u8g2.drawLine(x - 1, ErrorGraph[x - 2], x - 1, ErrorGraph[x - 1]);
+  }
 }
 
 //DISPLAYS INFORMATION WHILE TRAINING

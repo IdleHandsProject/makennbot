@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:/Users/hodginsa/Documents/idlehandsdev/make_nn_bot/PCB/make_nn_bot.sch</source>
-    <date>27/10/2017 11:30:22 AM</date>
+    <source>C:\Users\hodginsa\Documents\idlehandsdev\makennbot\PCB\make_nn_bot.sch</source>
+    <date>14/11/2017 2:26:22 PM</date>
     <tool>Eeschema 4.0.4-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -33,7 +33,7 @@
       <value>10k</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-10KJRCT-ND</field>
+        <field name="Digikey Part No.">311-10KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -43,7 +43,7 @@
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1343-1-ND</field>
+        <field name="Digikey Part No.">478-1239-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -53,7 +53,7 @@
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1343-1-ND</field>
+        <field name="Digikey Part No.">478-1239-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -63,7 +63,7 @@
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1343-1-ND</field>
+        <field name="Digikey Part No.">478-1239-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -73,7 +73,7 @@
       <value>15pF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">712-1261-1-ND</field>
+        <field name="Digikey Part No.">1276-2192-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -83,7 +83,7 @@
       <value>15pF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">712-1261-1-ND</field>
+        <field name="Digikey Part No.">1276-2192-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -103,7 +103,7 @@
       <value>Crystal_Small</value>
       <footprint>project_footprints:crystal_smd_5x3.2mm</footprint>
       <fields>
-        <field name="Digikey Part No.">631-1002-1-ND</field>
+        <field name="Digikey Part No.">535-9536-1-ND</field>
       </fields>
       <libsource lib="device" part="Crystal_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -113,7 +113,7 @@
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1343-1-ND</field>
+        <field name="Digikey Part No.">478-1239-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -123,7 +123,7 @@
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1343-1-ND</field>
+        <field name="Digikey Part No.">478-1239-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -153,7 +153,7 @@
       <value>2.2uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">1276-1291-1-ND</field>
+        <field name="Digikey Part No.">587-1430-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -183,7 +183,7 @@
       <value>1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">490-1320-1-ND</field>
+        <field name="Digikey Part No.">1276-1946-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -193,7 +193,7 @@
       <value>47K</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-47.0KLRCT-ND</field>
+        <field name="Digikey Part No.">311-47.0KHRCT-ND</field>
       </fields>
       <libsource lib="device" part="R_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -213,7 +213,7 @@
       <value>100k</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-100KLRCT-ND</field>
+        <field name="Digikey Part No.">311-100KHRCT-ND</field>
       </fields>
       <libsource lib="device" part="R_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -223,7 +223,7 @@
       <value>330</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-330JRCT-ND</field>
+        <field name="Digikey Part No.">311-330GRCT-ND</field>
       </fields>
       <libsource lib="device" part="R_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -233,7 +233,7 @@
       <value>2.2uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">490-10451-1-ND</field>
+        <field name="Digikey Part No.">587-1430-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -270,7 +270,7 @@
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">490-6328-1-ND</field>
+        <field name="Digikey Part No.">478-1239-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -280,7 +280,7 @@
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">490-6328-1-ND</field>
+        <field name="Digikey Part No.">478-1239-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -290,7 +290,7 @@
       <value>10uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1729-1-ND</field>
+        <field name="Digikey Part No.">587-1256-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -310,7 +310,7 @@
       <value>SW_PUSH</value>
       <footprint>Buttons_Switches_SMD:SW_SPST_EVQPE1</footprint>
       <fields>
-        <field name="Digikey Part No.">CKN9112CT-ND</field>
+        <field name="Digikey Part No.">401-1702-1-ND</field>
       </fields>
       <libsource lib="device" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -320,7 +320,7 @@
       <value>SW_PUSH</value>
       <footprint>Buttons_Switches_SMD:SW_SPST_EVQPE1</footprint>
       <fields>
-        <field name="Digikey Part No.">CKN9084CT-ND</field>
+        <field name="Digikey Part No.">401-1702-1-ND</field>
       </fields>
       <libsource lib="device" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -340,7 +340,7 @@
       <value>1k</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1.0KJRCT-ND</field>
+        <field name="Digikey Part No.">311-1.0KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -360,7 +360,7 @@
       <value>1k</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1.0KJRCT-ND</field>
+        <field name="Digikey Part No.">311-1.0KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -380,7 +380,7 @@
       <value>10K</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-10KJRCT-ND</field>
+        <field name="Digikey Part No.">311-10KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -400,7 +400,7 @@
       <value>47K</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-47.0KLRCT-ND</field>
+        <field name="Digikey Part No.">311-47.0KHRCT-ND</field>
       </fields>
       <libsource lib="device" part="R_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -430,7 +430,7 @@
       <value>4.7uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">490-5915-1-ND</field>
+        <field name="Digikey Part No.">490-5421-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -440,7 +440,7 @@
       <value>4.7uF</value>
       <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">490-5915-1-ND</field>
+        <field name="Digikey Part No.">490-5421-1-ND</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -450,7 +450,7 @@
       <value>33k</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-33KJRCT-ND</field>
+        <field name="Digikey Part No.">311-33KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -460,7 +460,7 @@
       <value>1K</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-1.0KJRCT-ND</field>
+        <field name="Digikey Part No.">311-1.0KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -469,6 +469,10 @@
     <comp ref="P3">
       <value>CONN_01X07</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x07</footprint>
+      <fields>
+        <field name="AliExpress">https://www.aliexpress.com/item/White-0-66-inch-OLED-Display-Module-64x48-0-66-LCD-Screen-SPI-for-Arduino-AVR/32782787258.html?spm=a2g0s.9042311.0.0.qYdk7h</field>
+        <field name="Digikey Part No.">S7040-ND</field>
+      </fields>
       <libsource lib="conn" part="CONN_01X07"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59CD5D9A</tstamp>
@@ -524,7 +528,7 @@
       <value>10K</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-10KJRCT-ND</field>
+        <field name="Digikey Part No.">311-10KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -534,7 +538,7 @@
       <value>10K</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-10KJRCT-ND</field>
+        <field name="Digikey Part No.">311-10KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -544,7 +548,7 @@
       <value>10K</value>
       <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Digikey Part No.">311-10KJRCT-ND</field>
+        <field name="Digikey Part No.">311-10KGRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -978,20 +982,20 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="mcp73831t">
-      <uri>C:\Users\hodginsa\Documents\idlehandsdev\idlehands_libs\mcp73831t.lib</uri>
-    </library>
-    <library logical="make_nn_bot-cache">
-      <uri>C:\Users\hodginsa\Documents\idlehandsdev\make_nn_bot\PCB\make_nn_bot-cache.lib</uri>
+    <library logical="device">
+      <uri>C:\KiCad\share\kicad\library\device.lib</uri>
     </library>
     <library logical="conn">
       <uri>C:\KiCad\share\kicad\library\conn.lib</uri>
     </library>
-    <library logical="device">
-      <uri>C:\KiCad\share\kicad\library\device.lib</uri>
-    </library>
     <library logical="regul">
       <uri>C:\KiCad\share\kicad\library\regul.lib</uri>
+    </library>
+    <library logical="mcp73831t">
+      <uri>C:\Users\hodginsa\Documents\idlehandsdev\idlehands_libs\mcp73831t.lib</uri>
+    </library>
+    <library logical="make_nn_bot-cache">
+      <uri>C:\Users\hodginsa\Documents\idlehandsdev\makennbot\PCB\make_nn_bot-cache.lib</uri>
     </library>
   </libraries>
   <nets>
