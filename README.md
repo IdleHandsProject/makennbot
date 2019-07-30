@@ -1,14 +1,8 @@
 # Make: Arduino Neural Network Robot
 A light avoiding robot that navigates using a Neural Network.
 
-Part 1 of the Build!
-[![Part 1 on YouTube](https://img.youtube.com/vi/0D5lcNIEa24/0.jpg)](https://youtu.be/0D5lcNIEa24)
-
-Part 2 of the Build!
-[![Part 2 on YouTube](https://img.youtube.com/vi/fCmMrSfEsuU/0.jpg)](https://youtu.be/fCmMrSfEsuU)
-
-Part 3 of the Build!
-[![Part 3 on YouTube](https://img.youtube.com/vi/97R3TcUh5eI/0.jpg)](https://youtu.be/97R3TcUh5eI)
+# Watch the Build Series!
+[![3 Part Series on YouTube](https://img.youtube.com/vi/wtNaPLmpy1I/0.jpg)](https://youtu.be/wtNaPLmpy1I)
 
 BOM Here: https://www.findchips.com/org/10-open-hardware/list/53285-makennbot
 
